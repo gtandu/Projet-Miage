@@ -3,42 +3,22 @@ package modele;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-@Entity
-@Table
 public class Jalon {
 	
-	@Id
-	@Column(name="ID")
+	
 	private Long id;
 	
-	@ManyToOne
-	@JoinColumn(name ="PROJETID")
 	private Projet projet;
 	
-	@Column(name="NOM")
 	private String nom;
 	
-	@Column(name="DATEDEBUT")
 	private Date dateDebut;
 	
-	@Column(name="DATEFIN")
 	private Date dateFin;
 	
-	@OneToMany(mappedBy ="jalonID", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Tache> listeTache;
 	
-	@Column(name="NOTE")
 	private double note;
 
 	public Long getId() {

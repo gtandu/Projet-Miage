@@ -2,41 +2,21 @@ package modele;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
-@Entity
-@Table
 public class Tache {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "ID")
+	
 	private Long id;
 
-	@OneToOne
-	@JoinColumn(name = "JALONID")
 	private Jalon jalonID;
 
-	@Column(name="NOMEXECUTANT")
 	private String nomExecutant;
 
-	@Column(name="DESCRIPTION")
 	private String description;
 
-	@Column(name="DATEDEBUT")
 	private Date dateDebut;
 
-	@Column(name="DATEFIN")
 	private Date dateFin;
 
-	@Column(name="ETAT")
 	private Boolean etat;
 
 	public Long getId() {
