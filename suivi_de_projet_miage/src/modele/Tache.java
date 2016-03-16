@@ -7,7 +7,7 @@ public class Tache {
 	
 	private Long id;
 
-	private Jalon jalonID;
+	private Jalon jalon;
 
 	private String nomExecutant;
 
@@ -27,12 +27,12 @@ public class Tache {
 		this.id = id;
 	}
 
-	public Jalon getJalonID() {
-		return jalonID;
+	public Jalon getJalon() {
+		return jalon;
 	}
 
-	public void setJalonID(Jalon jalonID) {
-		this.jalonID = jalonID;
+	public void setJalon(Jalon jalon) {
+		this.jalon = jalon;
 	}
 
 	public String getNomExecutant() {

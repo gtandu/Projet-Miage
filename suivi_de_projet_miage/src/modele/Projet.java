@@ -17,7 +17,7 @@ public class Projet {
 	
 	private String filiere;
 	
-	private Groupe groupe;
+	private List<Groupe> listeGroupes;
 	
 	private boolean etat;
 	
@@ -60,11 +60,11 @@ public class Projet {
 	public void setFiliere(String filiere) {
 		this.filiere = filiere;
 	}
-	public Groupe getGroupe() {
-		return groupe;
+	public List<Groupe> getListeGroupes() {
+		return listeGroupes;
 	}
-	public void setGroupe(Groupe groupe) {
-		this.groupe = groupe;
+	public void setListeGroupes(List<Groupe> listeGroupes) {
+		this.listeGroupes = listeGroupes;
 	}
 	public boolean isEtat() {
 		return etat;

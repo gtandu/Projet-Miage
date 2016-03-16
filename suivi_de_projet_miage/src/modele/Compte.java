@@ -2,24 +2,21 @@ package modele;
 
 import java.util.List;
 
-public class Compte {
+public abstract class Compte {
 
+	protected Long id;
 
-	private Long id;
-	
-	private List<Groupe> listeGroupes;
+	protected List<Groupe> listeGroupes;
 
-	private String nom;
+	protected String nom;
 
-	private String prenom;
-	
-	private String type;
+	protected String prenom;
 
-	private String login;
+	protected String type;
 
-	private String mdp;
+	protected String login;
 
-	private boolean admin;
+	protected String mdp;
 
 	public Long getId() {
 		return id;
@@ -29,7 +26,6 @@ public class Compte {
 		this.id = id;
 	}
 
-	
 	public List<Groupe> getListeGroupes() {
 		return listeGroupes;
 	}
@@ -54,7 +50,6 @@ public class Compte {
 		this.prenom = prenom;
 	}
 
-	
 	public String getType() {
 		return type;
 	}
@@ -77,14 +72,6 @@ public class Compte {
 
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
-	}
-
-	public boolean getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
 	}
 
 }

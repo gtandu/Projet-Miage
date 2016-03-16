@@ -6,8 +6,6 @@ public class Langage {
 
 	private Long id;
 	
-	private Projet projet;
-	
 	private String nom;
 	
 	public Long getId() {
@@ -15,12 +13,6 @@ public class Langage {
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public Projet getProjet() {
-		return projet;
-	}
-	public void setProjet(Projet projet) {
-		this.projet = projet;
 	}
 	public String getNom() {
 		return nom;

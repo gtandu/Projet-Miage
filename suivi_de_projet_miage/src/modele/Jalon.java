@@ -3,22 +3,22 @@ package modele;
 import java.util.Date;
 import java.util.List;
 
-
 public class Jalon {
-	
-	
+
 	private Long id;
-	
+
 	private Projet projet;
-	
+
 	private String nom;
-	
+
 	private Date dateDebut;
-	
+
 	private Date dateFin;
-	
-	private List<Tache> listeTache;
-	
+
+	private List<Tache> listeTaches;
+
+	private List<Document> listeDocuments;
+
 	private double note;
 
 	public Long getId() {
@@ -61,12 +61,20 @@ public class Jalon {
 		this.dateFin = dateFin;
 	}
 
-	public List<Tache> getListeTache() {
-		return listeTache;
+	public List<Tache> getListeTaches() {
+		return listeTaches;
 	}
 
-	public void setListeTache(List<Tache> listeTache) {
-		this.listeTache = listeTache;
+	public void setListeTaches(List<Tache> listeTaches) {
+		this.listeTaches = listeTaches;
+	}
+
+	public List<Document> getListeDocuments() {
+		return listeDocuments;
+	}
+
+	public void setListeDocuments(List<Document> listeDocuments) {
+		this.listeDocuments = listeDocuments;
 	}
 
 	public double getNote() {
@@ -76,13 +84,5 @@ public class Jalon {
 	public void setNote(double note) {
 		this.note = note;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
