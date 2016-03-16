@@ -2,12 +2,12 @@ package modele;
 
 public class Enseignant extends Compte{
 	
+	private boolean admin;
+	
 	public Enseignant(String nom, String prenom, String login, String mdp) {
 		super(nom, prenom, login, mdp);
-		// TODO Auto-generated constructor stub
+		this.admin = true;
 	}
-
-	private boolean admin;
 
 	public boolean isAdmin() {
 		return admin;

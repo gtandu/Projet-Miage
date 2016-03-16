@@ -20,7 +20,7 @@ public abstract class Compte {
 	
 	public Compte(String nom, String prenom, String login, String mdp)
 	{
-		this.id = ID++;
+		this.id = ++ID;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.login = login;
