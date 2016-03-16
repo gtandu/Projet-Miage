@@ -4,7 +4,7 @@ import java.util.List;
 
 public abstract class Compte {
 
-	protected Long id;
+	protected int id;
 
 	protected List<Groupe> listeGroupes;
 
@@ -12,17 +12,25 @@ public abstract class Compte {
 
 	protected String prenom;
 
-	protected String type;
-
 	protected String login;
 
 	protected String mdp;
-
-	public Long getId() {
+	
+	public static int  ID = 0;
+	
+	public Compte(String nom, String prenom, String login, String mdp)
+	{
+		this.id = ID++;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.login = login;
+		this.mdp = mdp;
+	}
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -48,14 +56,6 @@ public abstract class Compte {
 
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getLogin() {
