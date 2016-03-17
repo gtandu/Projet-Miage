@@ -1,11 +1,12 @@
 package modele;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Jalon {
 
-	private Long id;
+	private int id;
 
 	private Projet projet;
 
@@ -20,12 +21,24 @@ public class Jalon {
 	private List<Document> listeDocuments;
 
 	private double note;
+	
+	public static int  ID = 0;
 
-	public Long getId() {
+	public Jalon(String nom, Date dateDebut, Date dateFin, double note) {
+		this.id = ++ID;
+		this.nom = nom;
+		this.dateDebut = dateDebut;
+		this.dateFin = dateFin;
+		this.listeTaches = new ArrayList<Tache>();
+		this.listeDocuments = new ArrayList<Document>();
+		this.note = note;
+	}
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

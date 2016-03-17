@@ -73,5 +73,15 @@ public abstract class Compte {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
+	
+	public String toString()
+	{
+		return "Id: "+this.id+
+				"\nNom: "+this.nom+
+				"\nPrenom: "+this.prenom+
+				"\nLogin: "+this.login+
+				"\nMdp: "+this.mdp+
+				"\n"+this.listeGroupes.toString();
+	}
 
 }
