@@ -18,6 +18,18 @@ public class Tache {
 	private Date dateFin;
 
 	private Boolean etat;
+	
+	public Tache(Long id, Jalon jalon, String nomExecutant, String description, Date dateDebut, Date dateFin) {
+		
+		this.id = ++id;
+		this.jalon = jalon;
+		this.nomExecutant = nomExecutant;
+		this.description = description;
+		this.dateDebut = dateDebut;
+		this.dateFin = dateFin;
+		this.etat = true;
+		
+	}
 
 	public Long getId() {
 		return id;

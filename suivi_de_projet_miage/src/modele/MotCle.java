@@ -9,6 +9,15 @@ public class MotCle {
 	
 	private String nom;
 	
+	public static int  ID = 0;
+	
+	public MotCle(Long id, String nom) {
+		
+		this.id = ++id;
+		this.nom = nom;
+		
+}
+	
 	public Long getId() {
 		return id;
 	}

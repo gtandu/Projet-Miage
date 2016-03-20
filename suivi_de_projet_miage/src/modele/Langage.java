@@ -8,6 +8,14 @@ public class Langage {
 	
 	private String nom;
 	
+	public static int  ID = 0;
+	
+	public Langage(Long id, String nom) {
+		
+		this.id = ++id;
+		this.nom = nom;
+	}
+	
 	public Long getId() {
 		return id;
 	}

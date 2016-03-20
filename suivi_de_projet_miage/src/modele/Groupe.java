@@ -1,5 +1,6 @@
 package modele;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Groupe {
@@ -11,6 +12,18 @@ public class Groupe {
 	private List<Etudiant> listeEtudiants;
 
 	private List<Projet> listeProjets;
+	
+	public static int  ID = 0;
+	
+	public Groupe(Long id) {
+		
+		this.id = ++id;
+		this.listeEnseignants = new ArrayList<Enseignant>();
+		this.listeEtudiants = new ArrayList<Etudiant>();
+		this.listeProjets = new ArrayList<Projet>();
+		
+		
+	}
 
 	public Long getId() {
 		return id;
