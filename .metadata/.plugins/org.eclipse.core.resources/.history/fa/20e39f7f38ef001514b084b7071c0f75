@@ -8,11 +8,11 @@ public class Langage {
 	
 	private String nom;
 	
-	public static long  ID = 0;
+	public static int  ID = 0;
 	
 	public Langage(Long id, String nom) {
 		
-		this.id = ++ID;
+		this.id = ++id;
 		this.nom = nom;
 	}
 	
