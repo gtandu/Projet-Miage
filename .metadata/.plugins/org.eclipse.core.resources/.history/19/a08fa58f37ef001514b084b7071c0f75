@@ -19,11 +19,9 @@ public class Tache {
 
 	private Boolean etat;
 	
-	public static long  ID = 0;
-	
 	public Tache(Long id, Jalon jalon, String nomExecutant, String description, Date dateDebut, Date dateFin) {
 		
-		this.id = ++ID;
+		this.id = ++id;
 		this.jalon = jalon;
 		this.nomExecutant = nomExecutant;
 		this.description = description;
