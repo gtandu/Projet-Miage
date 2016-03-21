@@ -4,6 +4,9 @@ import java.util.Date;
 
 public class Tache {
 
+	
+	private Long id;
+
 	private Jalon jalon;
 
 	private String nomExecutant;
@@ -15,16 +18,27 @@ public class Tache {
 	private Date dateFin;
 
 	private Boolean etat;
-
-	public Tache(Jalon jalon, String nomExecutant, String description, Date dateDebut, Date dateFin) {
-
+	
+	public static long  ID = 0;
+	
+	public Tache(Long id, Jalon jalon, String nomExecutant, String description, Date dateDebut, Date dateFin) {
+		
+		this.id = ++ID;
 		this.jalon = jalon;
 		this.nomExecutant = nomExecutant;
 		this.description = description;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
 		this.etat = true;
+		
+	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public Jalon getJalon() {

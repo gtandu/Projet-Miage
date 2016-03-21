@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Tache {
 
+	
+
 	private Jalon jalon;
 
 	private String nomExecutant;
@@ -15,17 +17,19 @@ public class Tache {
 	private Date dateFin;
 
 	private Boolean etat;
-
+	
 	public Tache(Jalon jalon, String nomExecutant, String description, Date dateDebut, Date dateFin) {
-
+		
 		this.jalon = jalon;
 		this.nomExecutant = nomExecutant;
 		this.description = description;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
 		this.etat = true;
-
+		
 	}
+
+	
 
 	public Jalon getJalon() {
 		return jalon;

@@ -5,19 +5,25 @@ import java.util.List;
 
 public class Groupe {
 
+
 	private List<Enseignant> listeEnseignants;
 
 	private List<Etudiant> listeEtudiants;
 
 	private List<Projet> listeProjets;
-
+	
+	
 	public Groupe(Long id) {
-
+		
 		this.listeEnseignants = new ArrayList<Enseignant>();
 		this.listeEtudiants = new ArrayList<Etudiant>();
 		this.listeProjets = new ArrayList<Projet>();
-
+		
+		
 	}
+
+	
+	
 
 	public List<Enseignant> getListeEnseignants() {
 		return listeEnseignants;

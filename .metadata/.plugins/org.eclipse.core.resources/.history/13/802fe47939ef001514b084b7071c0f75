@@ -1,21 +1,18 @@
 package modele;
 
 
-
-
-public class MotCle {
+public class Langage {
 	
+
 	
 	private String nom;
 	
+	public static long  ID = 0;
 	
-	public MotCle(String nom) {
-		
+	public Langage(String nom) {
 		
 		this.nom = nom;
-		
-}
-	
+	}
 	
 	public String getNom() {
 		return nom;
@@ -23,7 +20,5 @@ public class MotCle {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
-	
 
 }

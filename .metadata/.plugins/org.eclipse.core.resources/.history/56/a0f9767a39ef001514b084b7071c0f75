@@ -21,8 +21,8 @@ public class Jalon {
 	private List<Document> listeDocuments;
 
 	private double note;
-
-	public static int ID = 0;
+	
+	public static int  ID = 0;
 
 	public Jalon(String nom, Date dateDebut, Date dateFin, double note) {
 		this.id = ++ID;
