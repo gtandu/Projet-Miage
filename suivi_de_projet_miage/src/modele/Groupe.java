@@ -11,7 +11,7 @@ public class Groupe {
 
 	private List<Projet> listeProjets;
 
-	public Groupe(Long id) {
+	public Groupe() {
 
 		this.listeEnseignants = new ArrayList<Enseignant>();
 		this.listeEtudiants = new ArrayList<Etudiant>();
