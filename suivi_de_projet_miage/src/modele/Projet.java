@@ -1,14 +1,10 @@
 package modele;
 
 import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
 
-public class Projet {
-	
-	
-	
-	private Long id;
-	
+public class Projet implements Comparable<Projet> {
+		
 	private String nom;
 	
 	private String description;
@@ -17,25 +13,32 @@ public class Projet {
 	
 	private String filiere;
 	
-	private List<Groupe> listeGroupes;
+	private HashSet<Groupe> listeGroupes;
 	
 	private boolean etat;
 	
 	private int note;
 	
-	private List<Langage> listeLangages;
+	private HashSet<Langage> listeLangages;
 	
-	private List<Jalon> listeJalons;
+	private HashSet<Jalon> listeJalons;
 	
-	private List<MotCle> listeMotsCles;
+	private HashSet<MotCle> listeMotsCles;
 	
-	
-	public Long getId() {
-		return id;
+	public Projet(String nom, String description, String filiere)
+	{
+		this.nom = nom;
+		this.description = description;
+		this.date = new Date();
+		this.filiere = filiere;
+		this.listeGroupes = new HashSet<>();
+		this.etat = true;
+		this.note = 0;
+		this.listeLangages = new HashSet<>();
+		this.listeJalons = new HashSet<>();
+		this.listeMotsCles = new HashSet<>();
 	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
 	public String getNom() {
 		return nom;
 	}
@@ -60,10 +63,10 @@ public class Projet {
 	public void setFiliere(String filiere) {
 		this.filiere = filiere;
 	}
-	public List<Groupe> getListeGroupes() {
+	public HashSet<Groupe> getListeGroupes() {
 		return listeGroupes;
 	}
-	public void setListeGroupes(List<Groupe> listeGroupes) {
+	public void setListeGroupes(HashSet<Groupe> listeGroupes) {
 		this.listeGroupes = listeGroupes;
 	}
 	public boolean isEtat() {
@@ -72,16 +75,16 @@ public class Projet {
 	public void setEtat(boolean etat) {
 		this.etat = etat;
 	}
-	public List<Langage> getListeLangages() {
+	public HashSet<Langage> getListeLangages() {
 		return listeLangages;
 	}
-	public void setListeLangages(List<Langage> listeLangages) {
+	public void setListeLangages(HashSet<Langage> listeLangages) {
 		this.listeLangages = listeLangages;
 	}
-	public List<Jalon> getListeJalons() {
+	public HashSet<Jalon> getListeJalons() {
 		return listeJalons;
 	}
-	public void setListeJalons(List<Jalon> listeJalons) {
+	public void setListeJalons(HashSet<Jalon> listeJalons) {
 		this.listeJalons = listeJalons;
 	}
 	public int getNote() {
@@ -90,13 +93,49 @@ public class Projet {
 	public void setNote(int note) {
 		this.note = note;
 	}
-	public List<MotCle> getListeMotsCles() {
+	public HashSet<MotCle> getListeMotsCles() {
 		return listeMotsCles;
 	}
-	public void setListeMotsCles(List<MotCle> listeMotsCles) {
+	public void setListeMotsCles(HashSet<MotCle> listeMotsCles) {
 		this.listeMotsCles = listeMotsCles;
 	}
 
+	public boolean ajouterLangageDeProgrammation(Langage langage)
+	{
+		return this.listeLangages.add(langage);
+	}
+	
+	public boolean supprimerLangageDeProgrammation(Langage langage)
+	{
+		return this.listeLangages.remove(langage);
+	}
+	
+	public boolean ajouterJalon(Jalon jalon)
+	{
+		return this.listeJalons.add(jalon);
+	}
+	
+	public boolean retirerJalon(Jalon jalon)
+	{
+		return this.listeJalons.remove(jalon);
+	}
+	
+	public boolean ajouterMotCle(MotCle motCle)
+	{
+		return this.listeMotsCles.add(motCle);
+	}
+	
+	public boolean retirerMotCle(MotCle motCle)
+	{
+		return this.listeMotsCles.remove(motCle);
+	}
+	
+	@Override
+	public int compareTo(Projet projet) {
+		return this.date.compareTo(projet.getDate());
+	}
+	
+	
 	
 	
 

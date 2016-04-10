@@ -7,7 +7,6 @@ public class Langage {
 	public static long ID = 0;
 
 	public Langage(String nom) {
-
 		this.nom = nom;
 	}
 

@@ -1,12 +1,10 @@
 package modele;
 
-import java.util.List;
+import java.util.HashSet;
 
 public abstract class Compte {
 
-	protected int id;
-
-	protected List<Groupe> listeGroupes;
+	protected HashSet<Groupe> listeGroupes;
 
 	protected String nom;
 
@@ -16,29 +14,21 @@ public abstract class Compte {
 
 	protected String mdp;
 	
-	public static int  ID = 0;
 	
 	public Compte(String nom, String prenom, String login, String mdp)
 	{
-		this.id = ++ID;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.login = login;
 		this.mdp = mdp;
-	}
-	public int getId() {
-		return id;
+		this.listeGroupes = new HashSet<>();
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public List<Groupe> getListeGroupes() {
+	public HashSet<Groupe> getListeGroupes() {
 		return listeGroupes;
 	}
 
-	public void setListeGroupes(List<Groupe> listeGroupes) {
+	public void setListeGroupes(HashSet<Groupe> listeGroupes) {
 		this.listeGroupes = listeGroupes;
 	}
 
@@ -76,8 +66,7 @@ public abstract class Compte {
 	
 	public String toString()
 	{
-		return "Id: "+this.id+
-				"\nNom: "+this.nom+
+		return "Nom: "+this.nom+
 				"\nPrenom: "+this.prenom+
 				"\nLogin: "+this.login+
 				"\nMdp: "+this.mdp+

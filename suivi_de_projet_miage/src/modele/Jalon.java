@@ -1,45 +1,55 @@
 package modele;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
-public class Jalon {
-
-	private int id;
-
-	private Projet projet;
+public class Jalon implements Comparable<Jalon> {
 
 	private String nom;
+	
+	private Projet projet;
 
 	private Date dateDebut;
 
 	private Date dateFin;
 
-	private List<Tache> listeTaches;
+	private HashSet<Tache> listeTaches;
 
-	private List<Document> listeDocuments;
+	private HashSet<Document> listeDocuments;
 
 	private double note;
 
-	public static int ID = 0;
-
-	public Jalon(String nom, Date dateDebut, Date dateFin, double note) {
-		this.id = ++ID;
+	public Jalon(String nom, Projet projet) {
 		this.nom = nom;
-		this.dateDebut = dateDebut;
-		this.dateFin = dateFin;
-		this.listeTaches = new ArrayList<Tache>();
-		this.listeDocuments = new ArrayList<Document>();
-		this.note = note;
+		this.projet = projet;
+		this.dateDebut = new Date();
+		this.dateFin = null;
+		this.listeTaches = new HashSet<Tache>();
+		this.listeDocuments = new HashSet<Document>();
+		this.note = 0;
 	}
-
-	public int getId() {
-		return id;
+	
+	public boolean ajouterTache(Tache t)
+	{
+		// TODO EXCEPTION
+		return this.listeTaches.add(t);
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	
+	public boolean supprimerTache(Tache t)
+	{
+		return this.listeTaches.remove(t);
+	}
+	
+	public boolean ajouterDocument(Document doc)
+	{
+		//TODO EXCEPTION
+		return this.listeDocuments.add(doc);
+	}
+	
+	public boolean supprimerDocument(Document doc)
+	{
+		return this.listeDocuments.remove(doc);
 	}
 
 	public Projet getProjet() {
@@ -74,19 +84,19 @@ public class Jalon {
 		this.dateFin = dateFin;
 	}
 
-	public List<Tache> getListeTaches() {
+	public HashSet<Tache> getListeTaches() {
 		return listeTaches;
 	}
 
-	public void setListeTaches(List<Tache> listeTaches) {
+	public void setListeTaches(HashSet<Tache> listeTaches) {
 		this.listeTaches = listeTaches;
 	}
 
-	public List<Document> getListeDocuments() {
+	public HashSet<Document> getListeDocuments() {
 		return listeDocuments;
 	}
 
-	public void setListeDocuments(List<Document> listeDocuments) {
+	public void setListeDocuments(HashSet<Document> listeDocuments) {
 		this.listeDocuments = listeDocuments;
 	}
 
@@ -96,6 +106,17 @@ public class Jalon {
 
 	public void setNote(double note) {
 		this.note = note;
+	}
+
+	@Override
+	public int compareTo(Jalon jalon) {
+		return this.dateDebut.compareTo(jalon.getDateDebut());
+	}
+	
+	public String toString()
+	{
+		//return "Nom :"+this.
+		return "";
 	}
 
 }

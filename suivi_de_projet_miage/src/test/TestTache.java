@@ -7,6 +7,7 @@ import java.util.Date;
 import org.junit.Test;
 
 import modele.Jalon;
+import modele.Projet;
 import modele.Tache;
 
 public class TestTache {
@@ -15,7 +16,8 @@ public class TestTache {
 	public void testConstructeur() {
 
 		// When
-		Jalon jalon = new Jalon("EL GOFF", new Date(), new Date(), 20);
+		Projet projet = new Projet("Test projet", "Test unitaire", "Miage");
+		Jalon jalon = new Jalon("EL GOFF", projet);
 		String nomExecutantAttendu = "EL GOFF";
 		String descriptionAttendu = "Rien à signalé";
 		boolean etatAttendu = true;

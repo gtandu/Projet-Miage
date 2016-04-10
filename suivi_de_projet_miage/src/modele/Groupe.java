@@ -1,46 +1,76 @@
 package modele;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 
 public class Groupe {
 
-	private List<Enseignant> listeEnseignants;
+	private HashSet<Enseignant> listeEnseignants;
 
-	private List<Etudiant> listeEtudiants;
+	private HashSet<Etudiant> listeEtudiants;
 
-	private List<Projet> listeProjets;
+	private HashSet<Projet> listeProjets;
 
 	public Groupe() {
-
-		this.listeEnseignants = new ArrayList<Enseignant>();
-		this.listeEtudiants = new ArrayList<Etudiant>();
-		this.listeProjets = new ArrayList<Projet>();
-
+		this.listeEnseignants = new HashSet<Enseignant>();
+		this.listeEtudiants = new HashSet<Etudiant>();
+		this.listeProjets = new HashSet<Projet>();
 	}
 
-	public List<Enseignant> getListeEnseignants() {
+	public HashSet<Enseignant> getListeEnseignants() {
 		return listeEnseignants;
 	}
 
-	public void setListeEnseignants(List<Enseignant> listeEnseignants) {
+	public void setListeEnseignants(HashSet<Enseignant> listeEnseignants) {
 		this.listeEnseignants = listeEnseignants;
 	}
 
-	public List<Etudiant> getListeEtudiants() {
+	public HashSet<Etudiant> getListeEtudiants() {
 		return listeEtudiants;
 	}
 
-	public void setListeEtudiants(List<Etudiant> listeEtudiants) {
+	public void setListeEtudiants(HashSet<Etudiant> listeEtudiants) {
 		this.listeEtudiants = listeEtudiants;
 	}
 
-	public List<Projet> getListeProjets() {
+	public HashSet<Projet> getListeProjets() {
 		return listeProjets;
 	}
 
-	public void setListeProjets(List<Projet> listeProjets) {
+	public void setListeProjets(HashSet<Projet> listeProjets) {
 		this.listeProjets = listeProjets;
 	}
+	
+	public boolean ajouterEnseignement(Enseignant enseignant)
+	{
+		return this.listeEnseignants.add(enseignant);
+	}
+	
+	public boolean supprimerEnseignement(Enseignant enseignant)
+	{
+		return this.listeEnseignants.remove(enseignant);
+	}
+	
+	public boolean ajouterEtudiant(Etudiant etudiant)
+	{
+		return this.listeEtudiants.add(etudiant);
+	}
+	
+	public boolean supprimerEtudiant(Etudiant etudiant)
+	{
+		return this.listeEtudiants.remove(etudiant);
+	}
+	
+	public boolean ajouterProjet(Projet projet)
+	{
+		return this.listeProjets.add(projet);
+	}
+	
+	public boolean retirerProjet(Projet projet)
+	{
+		return this.listeProjets.remove(projet);
+	}
+	
+	
+	
 
 }

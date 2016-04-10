@@ -1,23 +1,23 @@
 package modele;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 
 public class Etudiant extends Compte {
 	
-	private List<Projet> listeProjets;
+	private HashSet<Projet> listeProjets;
 	
 	public Etudiant(String nom, String prenom, String login, String mdp) {
 		super(nom, prenom, login, mdp);
-		this.listeProjets = new ArrayList<Projet>();
+		this.listeProjets = new HashSet<Projet>();
 	}
 
-	public List<Projet> getListeProjets() {
+	public HashSet<Projet> getListeProjets() {
 		return listeProjets;
 	}
 
-	public void setListeProjets(List<Projet> listeProjets) {
+	public void setListeProjets(HashSet<Projet> listeProjets) {
 		this.listeProjets = listeProjets;
 	}
+	
 
 }

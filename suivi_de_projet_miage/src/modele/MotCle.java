@@ -5,9 +5,7 @@ public class MotCle {
 	private String nom;
 
 	public MotCle(String nom) {
-
 		this.nom = nom;
-
 	}
 
 	public String getNom() {

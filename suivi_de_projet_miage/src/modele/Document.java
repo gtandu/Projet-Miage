@@ -7,6 +7,12 @@ public class Document {
 	private String nom;
 	
 	private File document;
+	
+	public Document(String nom, File document)
+	{
+		this.nom = nom;
+		this.document = document;
+	}
 
 	public String getNom() {
 		return nom;
@@ -22,6 +28,11 @@ public class Document {
 
 	public void setDocument(File document) {
 		this.document = document;
+	}
+	
+	public String toString()
+	{
+		return "Nom du document :"+this.nom;
 	}
 	
 	

@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="modele.Groupe"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="modele.Enseignant"/>
-<fullyQualifiedTypeName name="modele.Etudiant"/>
-<fullyQualifiedTypeName name="modele.Projet"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="modele.Tache"/>
 <fullyQualifiedTypeName name="modele.Jalon"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="modele.Tache"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="org.hamcrest.Matcher"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.AllOf"/>
+<fullyQualifiedTypeName name="org.hamcrest.MatcherAssert"/>
+<fullyQualifiedTypeName name="javax.swing.SpringLayout.Constraints"/>
+<fullyQualifiedTypeName name="org.hamcrest.CoreMatchers"/>
+<fullyQualifiedTypeName name="org.hamcrest.Matchers"/>
+<fullyQualifiedTypeName name="modele.Document"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="modele.Etudiant"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.hamcrest.collection.IsEmptyCollection"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.IsNot"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.IsNull"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="modele.Groupe"/>
+<fullyQualifiedTypeName name="modele.Enseignant"/>
+<fullyQualifiedTypeName name="org.hamcrest.collection.IsCollectionWithSize"/>
+<fullyQualifiedTypeName name="org.hamcrest.core.IsCollectionContaining"/>
+<fullyQualifiedTypeName name="modele.MotCle"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="modele.Langage"/>
+<fullyQualifiedTypeName name="modele.Projet"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
 </qualifiedTypeNameHistroy>
