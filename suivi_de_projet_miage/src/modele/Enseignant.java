@@ -19,9 +19,9 @@ public class Enseignant extends Compte{
 		this.admin = admin;
 	}
 	
-	public Groupe creerGroupe()
+	public Groupe creerGroupe(String nom)
 	{
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe(nom);
 		groupe.ajouterEnseignement(this);
 		this.listeGroupes.add(groupe);
 		return groupe;

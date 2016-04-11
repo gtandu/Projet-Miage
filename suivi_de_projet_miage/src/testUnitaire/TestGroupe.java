@@ -19,7 +19,7 @@ public class TestGroupe {
 	@Test
 	public void testConstructeur() {
 		// When
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 		HashSet<Enseignant> listeEnseignants = groupe.getListeEnseignants();
 		HashSet<Etudiant> listeEtudiants = groupe.getListeEtudiants();
 		HashSet<Projet> listeProjets = groupe.getListeProjets();
@@ -31,7 +31,7 @@ public class TestGroupe {
 	public void ajouterEnseignant() {
 		// WHEN
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 
 		// GIVEN
 		groupe.ajouterEnseignement(enseignant);
@@ -45,7 +45,7 @@ public class TestGroupe {
 	public void ajouterDeuxFoisMemeEnseignant() {
 		// WHEN
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 
 		// GIVEN
 		groupe.ajouterEnseignement(enseignant);
@@ -61,7 +61,7 @@ public class TestGroupe {
 	public void supprimerEnseignant() {
 		// WHEN
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 		groupe.ajouterEnseignement(enseignant);
 
 		// GIVEN
@@ -76,7 +76,7 @@ public class TestGroupe {
 	public void ajouterEtudiant() {
 		// WHEN
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 
 		// GIVEN
 		groupe.ajouterEtudiant(etudiant);
@@ -90,7 +90,7 @@ public class TestGroupe {
 	public void supprimerEtudiant() {
 		// WHEN
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 		groupe.ajouterEtudiant(etudiant);
 
 		// GIVEN

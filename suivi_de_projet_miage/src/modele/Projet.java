@@ -130,9 +130,15 @@ public class Projet implements Comparable<Projet> {
 		return this.listeMotsCles.remove(motCle);
 	}
 	
+	
 	@Override
 	public int compareTo(Projet projet) {
 		return this.date.compareTo(projet.getDate());
+	}
+	
+	public String toString()
+	{
+		return "";
 	}
 	
 	

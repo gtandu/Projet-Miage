@@ -1,6 +1,7 @@
 package modele;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public abstract class Compte {
 
@@ -64,13 +65,29 @@ public abstract class Compte {
 		this.mdp = mdp;
 	}
 	
+	public boolean ajouterGroupe(Groupe groupe)
+	{
+		return this.listeGroupes.add(groupe);
+	}
+	
+	public boolean retirerGroupe(Groupe groupe)
+	{
+		return this.listeGroupes.remove(groupe);
+	}
+	
 	public String toString()
 	{
+		String listeGroupe = "";
+		Iterator<Groupe> it = this.listeGroupes.iterator();
+		while (it.hasNext()) {
+		 listeGroupe += it.next().toString()+"\n";
+		}
+
 		return "Nom: "+this.nom+
 				"\nPrenom: "+this.prenom+
 				"\nLogin: "+this.login+
 				"\nMdp: "+this.mdp+
-				"\n"+this.listeGroupes.toString();
+				"\n"+listeGroupe;
 	}
 
 }
