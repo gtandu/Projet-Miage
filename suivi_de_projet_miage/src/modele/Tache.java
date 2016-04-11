@@ -83,6 +83,12 @@ public class Tache implements Comparable<Tache>{
 		
 	}
 	
+	@Override
+	public String toString() {
+		return "Tache [jalon=" + jalon + ", nomExecutant=" + nomExecutant + ", description=" + description
+				+ ", dateDebut=" + dateDebut + ", dateFin=" + dateFin + ", etat=" + etat + "]";
+	}
+	
 	
 
 }

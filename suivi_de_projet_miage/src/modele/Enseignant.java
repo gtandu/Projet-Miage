@@ -19,6 +19,13 @@ public class Enseignant extends Compte{
 		this.admin = admin;
 	}
 	
+	public Projet creerProjet(String nom, String description, String filiere)
+	{
+		Projet projet = new Projet(nom, description, filiere);
+		
+		return projet;
+	}
+	
 	public Groupe creerGroupe(String nom)
 	{
 		Groupe groupe = new Groupe(nom);
@@ -47,6 +54,25 @@ public class Enseignant extends Compte{
 		
 	}
 	
+	public boolean affecterGroupeAuProjet(Groupe groupe, Projet projet)
+	{
+		if(this.listeGroupes.contains(groupe))
+		{
+			projet.ajouterGroupe(groupe);
+			return groupe.ajouterProjet(projet);
+		}
+		return false;
+	}
+	
+	public boolean retirerGroupeAuProjet(Groupe groupe, Projet projet)
+	{
+		if(this.listeGroupes.contains(groupe))
+		{
+			projet.retirerGroupe(groupe);
+			return groupe.retirerProjet(projet);
+		}
+		return false;
+	}
 	
 	
 

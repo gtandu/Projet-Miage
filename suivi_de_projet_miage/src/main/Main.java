@@ -9,13 +9,16 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Projet p = new Projet("Projet 1", "Test projet", "Miage");
 		
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
+		
+		Projet projet = enseignant.creerProjet("Projet 1", "Test projet", "Miage");
 		
 		Groupe g1 = enseignant.creerGroupe("Groupe 1");
 		
 		Groupe g2 = enseignant.creerGroupe("Groupe 2");
+		
+		System.out.println(enseignant);
 		
 		Etudiant etu1 = new Etudiant("Tandu", "Glodie", "gTandu", "azerty");
 		
@@ -33,8 +36,18 @@ public class Main {
 		
 		enseignant.affecterEtudiantGroupe(etu4, g2);
 		
-		System.out.println(g1);
-		System.out.println(g2);
+		enseignant.affecterGroupeAuProjet(g1, projet);
+		
+		enseignant.affecterGroupeAuProjet(g2, projet);
+		
+		
+		
+		//TODO ENSEIGNANT QUI CREE LE PROJET
+		//TODO AFFECTER GROUPE AU PROJET
+		//TODO TOSTRING PROJET FINAL
+
+		
+		System.out.println(projet);
 		
 		
 		

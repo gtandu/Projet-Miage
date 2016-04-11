@@ -113,10 +113,10 @@ public class Jalon implements Comparable<Jalon> {
 		return this.dateDebut.compareTo(jalon.getDateDebut());
 	}
 	
-	public String toString()
-	{
-		//return "Nom :"+this.
-		return "";
+	@Override
+	public String toString() {
+		return "Jalon [nom=" + nom + ", projet=" + projet + ", dateDebut=" + dateDebut + ", dateFin=" + dateFin
+				+ ", listeTaches=" + listeTaches + ", listeDocuments=" + listeDocuments + ", note=" + note + "]";
 	}
 
 }

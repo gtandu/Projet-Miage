@@ -75,19 +75,29 @@ public abstract class Compte {
 		return this.listeGroupes.remove(groupe);
 	}
 	
+	public boolean equals(Compte compte)
+	{
+		return this.nom.equals(compte.getNom()) && this.prenom.equals(compte.getPrenom());
+	}
+	
+	public int hashCode()
+	{
+		return this.nom.hashCode()+this.prenom.hashCode();
+	}
+	
 	public String toString()
 	{
 		String listeGroupe = "";
 		Iterator<Groupe> it = this.listeGroupes.iterator();
 		while (it.hasNext()) {
-		 listeGroupe += it.next().toString()+"\n";
+		 listeGroupe += "\t - "+it.next().toString()+"\n";
 		}
 
 		return "Nom: "+this.nom+
 				"\nPrenom: "+this.prenom+
 				"\nLogin: "+this.login+
 				"\nMdp: "+this.mdp+
-				"\n"+listeGroupe;
+				"\nListes des groupes : \n"+listeGroupe;
 	}
 
 }

@@ -69,6 +69,7 @@ public class Groupe {
 	}
 
 	public boolean ajouterProjet(Projet projet) {
+		// COPY PROJET ?
 		return this.listeProjets.add(projet);
 	}
 
@@ -89,14 +90,8 @@ public class Groupe {
 	
 	public String toString()
 	{
-		String listeEnseignant = "";
-		Iterator<Enseignant> it = this.listeEnseignants.iterator();
-		while (it.hasNext()) {
-		 listeEnseignant = it.next().toString()+"\n";
-		}
 
-		return "Nom du groupe : "+this.nom+
-				"\nEnseignants : "+listeEnseignant;
+		return "Nom du groupe : "+this.nom;
 	}
 	
 	

@@ -99,6 +99,16 @@ public class Projet implements Comparable<Projet> {
 	public void setListeMotsCles(HashSet<MotCle> listeMotsCles) {
 		this.listeMotsCles = listeMotsCles;
 	}
+	
+	public boolean ajouterGroupe(Groupe groupe)
+	{
+		return this.listeGroupes.add(groupe);
+	}
+	
+	public boolean retirerGroupe(Groupe groupe)
+	{
+		return this.listeGroupes.remove(groupe);
+	}
 
 	public boolean ajouterLangageDeProgrammation(Langage langage)
 	{
@@ -129,16 +139,17 @@ public class Projet implements Comparable<Projet> {
 	{
 		return this.listeMotsCles.remove(motCle);
 	}
-	
-	
+		
 	@Override
 	public int compareTo(Projet projet) {
 		return this.date.compareTo(projet.getDate());
 	}
 	
-	public String toString()
-	{
-		return "";
+	@Override
+	public String toString() {
+		return "Projet [nom=" + nom + ", description=" + description + ", date=" + date + ", filiere=" + filiere
+				+ ", listeGroupes=" + listeGroupes + ", etat=" + etat + ", note=" + note + ", listeLangages="
+				+ listeLangages + ", listeJalons=" + listeJalons + ", listeMotsCles=" + listeMotsCles + "]";
 	}
 	
 	
