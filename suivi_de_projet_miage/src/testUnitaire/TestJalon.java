@@ -1,4 +1,4 @@
-package test;
+package testUnitaire;
 
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;

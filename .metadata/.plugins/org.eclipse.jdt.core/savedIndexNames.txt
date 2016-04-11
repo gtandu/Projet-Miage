@@ -4,7 +4,6 @@ INDEX VERSION 1.127+/Users/Glodie/Documents/Projet-Miage/.metadata/.plugins/org.
 3693902031.index
 3713255034.index
 1271342938.index
-3974505554.index
 2657941695.index
 2043952971.index
 195485887.index
