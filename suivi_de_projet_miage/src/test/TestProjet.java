@@ -7,6 +7,7 @@ import java.util.HashSet;
 
 import org.junit.Test;
 
+import modele.Jalon;
 import modele.Langage;
 import modele.Projet;
 
@@ -50,14 +51,29 @@ public class TestProjet {
 		Langage langage = new Langage("Java");
 		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
 		projet.ajouterLangageDeProgrammation(langage);
-		//GIVEN
 		
+		//GIVEN
 		projet.supprimerLangageDeProgrammation(langage);
 		HashSet<Langage> langagesProgrammations = projet.getListeLangages();
 		
 		//THEN
 		assertThat(langagesProgrammations, not(contains(langage)));		
 				
+	}
+	
+	@Test
+	public void ajouterJalon()
+	{
+		//WHEN
+		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
+		Jalon jalon = new Jalon("Jalon1", projet);
+		
+		//GIVEN
+		projet.ajouterJalon(jalon);
+		HashSet<Jalon> jalonsduProjet = projet.getListeJalons();
+		
+		//THEN
+		assertThat(jalonsduProjet, contains(jalon));
 	}
 	
 	
