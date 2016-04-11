@@ -4,7 +4,9 @@ import java.util.HashSet;
 
 public class Groupe {
 
-	private HashSet<Enseignant> listeEnseignants; 
+	private String nom;
+
+	private HashSet<Enseignant> listeEnseignants;
 
 	private HashSet<Etudiant> listeEtudiants;
 
@@ -14,6 +16,14 @@ public class Groupe {
 		this.listeEnseignants = new HashSet<Enseignant>();
 		this.listeEtudiants = new HashSet<Etudiant>();
 		this.listeProjets = new HashSet<Projet>();
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
 	public HashSet<Enseignant> getListeEnseignants() {
@@ -39,37 +49,41 @@ public class Groupe {
 	public void setListeProjets(HashSet<Projet> listeProjets) {
 		this.listeProjets = listeProjets;
 	}
-	
-	public boolean ajouterEnseignement(Enseignant enseignant)
-	{
+
+	public boolean ajouterEnseignement(Enseignant enseignant) {
 		return this.listeEnseignants.add(enseignant);
 	}
-	
-	public boolean supprimerEnseignement(Enseignant enseignant)
-	{
+
+	public boolean supprimerEnseignement(Enseignant enseignant) {
 		return this.listeEnseignants.remove(enseignant);
 	}
-	
-	public boolean ajouterEtudiant(Etudiant etudiant)
-	{
+
+	public boolean ajouterEtudiant(Etudiant etudiant) {
 		return this.listeEtudiants.add(etudiant);
 	}
-	
-	public boolean supprimerEtudiant(Etudiant etudiant)
-	{
+
+	public boolean supprimerEtudiant(Etudiant etudiant) {
 		return this.listeEtudiants.remove(etudiant);
 	}
-	
-	public boolean ajouterProjet(Projet projet)
-	{
+
+	public boolean ajouterProjet(Projet projet) {
 		return this.listeProjets.add(projet);
 	}
-	
+
 	public boolean retirerProjet(Projet projet)
 	{
 		return this.listeProjets.remove(projet);
 	}
+
+	public boolean equals(Groupe groupe)
+	{
+		return this.nom.equals(groupe.getNom());
+	}
 	
+	public int hashCode()
+	{
+		return this.nom.hashCode();
+	}
 	
 	
 
