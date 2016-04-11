@@ -100,5 +100,39 @@ public class TestGroupe {
 		// THEN
 		assertThat(etudiantsDuGroupe, not(contains(etudiant)));
 	}
+	
+	@Test
+	public void deuxGroupeDIfferentHashCode()
+	{
+		//WHEN
+		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
+		Groupe groupe1 = enseignant.creerGroupe("Groupe 1");
+		Groupe groupe2 = enseignant.creerGroupe("Groupe 2");
+		
+		//GIVEN
+		int hashCodeGroupe1 = groupe1.hashCode();
+		int hashCodeGroupe2 = groupe2.hashCode();
+		
+		//THEN
+		
+		assertNotEquals(hashCodeGroupe1, hashCodeGroupe2);
+	}
+	
+	@Test
+	public void deuxGroupeMemeHashCode()
+	{
+		//WHEN
+		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
+		Groupe groupe1 = enseignant.creerGroupe("Groupe 1");
+		Groupe groupe2 = enseignant.creerGroupe("Groupe 1");
+		
+		//GIVEN
+		int hashCodeGroupe1 = groupe1.hashCode();
+		int hashCodeGroupe2 = groupe2.hashCode();
+		
+		//THEN
+		
+		assertEquals(hashCodeGroupe1, hashCodeGroupe2);
+	}
 
 }
