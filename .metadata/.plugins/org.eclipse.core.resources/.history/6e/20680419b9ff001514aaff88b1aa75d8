@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class Groupe {
 
-	private HashSet<Enseignant> listeEnseignants; 
+	private HashSet<Enseignant> listeEnseignants;
 
 	private HashSet<Etudiant> listeEtudiants;
 

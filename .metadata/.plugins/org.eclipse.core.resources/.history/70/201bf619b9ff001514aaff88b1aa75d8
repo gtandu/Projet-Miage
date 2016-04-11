@@ -1,4 +1,4 @@
-package testUnitaire;
+package test;
 
 import static org.junit.Assert.*;
 
@@ -15,12 +15,12 @@ public class TestMotCle {
 		String nomAttendu ="EGsasa";
 		
 		//Then
-		MotCle motcle = new MotCle(nomAttendu);
+		MotCle mc = new MotCle(nomAttendu);
 		
-		String nomActuel = motcle.getNom();
+		String nomActuel = mc.getNom();
 		
 		//Given
-		assertNotNull(motcle);
+		assertNotNull(mc);
 		assertEquals(nomAttendu, nomActuel);
 		
 		

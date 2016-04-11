@@ -2,7 +2,7 @@ package modele;
 
 import java.util.Date;
 
-public class Tache implements Comparable<Tache>{
+public class Tache {
 
 	private Jalon jalon;
 
@@ -74,15 +74,5 @@ public class Tache implements Comparable<Tache>{
 	public void setEtat(Boolean etat) {
 		this.etat = etat;
 	}
-
-	@Override
-	public int compareTo(Tache tache) {
-		
-		return this.dateDebut.compareTo(tache.getDateDebut());
-	
-		
-	}
-	
-	
 
 }
