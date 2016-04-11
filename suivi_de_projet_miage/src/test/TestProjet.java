@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import modele.Jalon;
 import modele.Langage;
+import modele.MotCle;
 import modele.Projet;
 
 public class TestProjet {
@@ -74,6 +75,87 @@ public class TestProjet {
 		
 		//THEN
 		assertThat(jalonsduProjet, contains(jalon));
+	}
+	
+	@Test
+	public void ajouterDeuxMemeJalon()
+	{
+		//WHEN
+		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
+		Jalon jalon = new Jalon("Jalon1", projet);
+		
+		//GIVEN
+		projet.ajouterJalon(jalon);
+		projet.ajouterJalon(jalon);
+		HashSet<Jalon> jalonsduProjet = projet.getListeJalons();
+		
+		//THEN
+		assertThat(jalonsduProjet, contains(jalon));
+		assertThat(jalonsduProjet, hasSize(1));
+	}
+	
+	@Test
+	public void retirerJalon()
+	{
+		//WHEN
+		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
+		Jalon jalon = new Jalon("Jalon1", projet);
+		projet.ajouterJalon(jalon);
+		//GIVEN
+		projet.retirerJalon(jalon);
+		HashSet<Jalon> jalonsduProjet = projet.getListeJalons();
+		
+		//THEN
+		assertThat(jalonsduProjet, not(contains(jalon)));
+	}
+	
+	@Test
+	public void ajouterMotCle()
+	{
+		//WHEN
+		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
+		MotCle motCle = new MotCle("java");
+		
+		//GIVEN
+		projet.ajouterMotCle(motCle);
+		HashSet<MotCle> motClesDuProjet = projet.getListeMotsCles();
+		
+		//THEN
+		assertThat(motClesDuProjet, contains(motCle));
+	}
+	
+	@Test
+	public void ajouterDeuxMemeMotCle()
+	{
+		//WHEN
+		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
+		MotCle motCle = new MotCle("java");
+		
+		//GIVEN
+		projet.ajouterMotCle(motCle);
+		projet.ajouterMotCle(motCle);
+		HashSet<MotCle> motClesDuProjet = projet.getListeMotsCles();
+		
+		//THEN
+		assertThat(motClesDuProjet, contains(motCle));
+		//assertThat(motClesDuProjet, hasSize(1));
+	}
+	
+	@Test
+	public void retirerMotCle()
+	{
+		//WHEN
+		Projet projet = new Projet("TestProjet", "Projet test unitaire", "Miage");
+		MotCle motCle = new MotCle("java");
+		projet.ajouterMotCle(motCle);
+		//GIVEN
+		
+		projet.retirerMotCle(motCle);
+		HashSet<MotCle> motClesDuProjet = projet.getListeMotsCles();
+		
+		//THEN
+		assertThat(motClesDuProjet, not(contains(motCle)));
+		assertThat(motClesDuProjet, hasSize(0));
 	}
 	
 	
