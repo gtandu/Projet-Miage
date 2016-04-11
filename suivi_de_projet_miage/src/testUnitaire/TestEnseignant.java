@@ -52,7 +52,7 @@ public class TestEnseignant {
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jbenzakki", "azerty");
 		
 		//Given
-		Groupe groupe = enseignant.creerGroupe();
+		Groupe groupe = enseignant.creerGroupe("Groupe 1");
 		HashSet<Enseignant> enseignantsResponsables = groupe.getListeEnseignants();
 		
 		//Then
@@ -65,7 +65,7 @@ public class TestEnseignant {
 	{
 		//When
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jbenzakki", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu","azerty");
 		
 		
@@ -83,7 +83,7 @@ public class TestEnseignant {
 	{
 		//When
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jbenzakki", "azerty");
-		Groupe groupe = enseignant.creerGroupe();
+		Groupe groupe = enseignant.creerGroupe("Groupe 1");
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu","azerty");
 		
 		
@@ -100,7 +100,7 @@ public class TestEnseignant {
 	{
 		//When
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jbenzakki", "azerty");
-		Groupe groupe = enseignant.creerGroupe();
+		Groupe groupe = enseignant.creerGroupe("Groupe 1");
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu","azerty");
 		
 		
@@ -119,7 +119,7 @@ public class TestEnseignant {
 	{
 		//When
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jbenzakki", "azerty");
-		Groupe groupe = new Groupe();
+		Groupe groupe = new Groupe("Groupe 1");
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu","azerty");
 		enseignant.affecterEtudiantGroupe(etudiant, groupe);
 		
@@ -137,7 +137,7 @@ public class TestEnseignant {
 	{
 		//When
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jbenzakki", "azerty");
-		Groupe groupe = enseignant.creerGroupe();
+		Groupe groupe = enseignant.creerGroupe("Groupe 1");
 		Etudiant etudiant = new Etudiant("Tandu", "Glodie", "gtandu","azerty");
 		enseignant.affecterEtudiantGroupe(etudiant, groupe);
 		

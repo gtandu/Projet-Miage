@@ -1,6 +1,7 @@
 package modele;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Groupe {
 
@@ -12,7 +13,8 @@ public class Groupe {
 
 	private HashSet<Projet> listeProjets;
 
-	public Groupe() {
+	public Groupe(String nom) {
+		this.nom = nom;
 		this.listeEnseignants = new HashSet<Enseignant>();
 		this.listeEtudiants = new HashSet<Etudiant>();
 		this.listeProjets = new HashSet<Projet>();
@@ -83,6 +85,18 @@ public class Groupe {
 	public int hashCode()
 	{
 		return this.nom.hashCode();
+	}
+	
+	public String toString()
+	{
+		String listeEnseignant = "";
+		Iterator<Enseignant> it = this.listeEnseignants.iterator();
+		while (it.hasNext()) {
+		 listeEnseignant = it.next().toString()+"\n";
+		}
+
+		return "Nom du groupe : "+this.nom+
+				"\nEnseignants : "+listeEnseignant;
 	}
 	
 	
