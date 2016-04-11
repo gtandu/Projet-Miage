@@ -15,16 +15,5 @@ public class MotCle {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	
-	public boolean equals(MotCle motcle)
-	{
-		return this.nom.equals(motcle.getNom());
-	}
-	
-	public int hashCode()
-	{
-		return this.nom.hashCode();
-		
-	}
 
 }

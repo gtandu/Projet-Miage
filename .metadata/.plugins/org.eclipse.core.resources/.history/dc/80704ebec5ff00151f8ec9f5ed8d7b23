@@ -17,14 +17,5 @@ public class Langage {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public boolean equals(Langage langage)
-	{
-		return this.nom.equals(langage.getNom());
-	}
-	
-	public int hashCode()
-	{
-		return this.nom.hashCode();
-		
-	}
+
 }
