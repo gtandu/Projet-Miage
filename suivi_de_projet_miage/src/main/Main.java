@@ -20,6 +20,8 @@ public class Main {
 		
 		System.out.println(enseignant);
 		
+		
+		
 		Etudiant etu1 = new Etudiant("Tandu", "Glodie", "gTandu", "azerty");
 		
 		Etudiant etu2 = new Etudiant("El Goff", "Saher", "sElGoff", "azerty");
@@ -35,6 +37,9 @@ public class Main {
 		enseignant.affecterEtudiantGroupe(etu3, g2);
 		
 		enseignant.affecterEtudiantGroupe(etu4, g2);
+		
+		System.out.println(g1);
+		System.out.println(g2);
 		
 		enseignant.affecterGroupeAuProjet(g1, projet);
 		

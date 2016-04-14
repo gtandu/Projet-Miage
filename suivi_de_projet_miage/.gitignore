@@ -12,6 +12,7 @@
 .project
 
 .metadata
+.metadata/*
 bin/
 tmp/
 *.tmp
@@ -60,4 +61,6 @@ local.properties
 .springBeans
 
 # Code Recommenders
+.recommenders
 .recommenders/
+.recommenders/*
