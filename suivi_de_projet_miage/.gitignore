@@ -2,6 +2,14 @@
 # Created by https://www.gitignore.io/api/eclipse
 
 ### Eclipse ###
+# Eclipse files #
+#################
+#Eclipse configuration directories
+.classpath/
+.project/
+.settings/
+.classpath
+.project
 
 .metadata
 bin/

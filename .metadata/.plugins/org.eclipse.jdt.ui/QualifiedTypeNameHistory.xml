@@ -24,8 +24,9 @@
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="modele.Jalon"/>
 <fullyQualifiedTypeName name="modele.MotCle"/>
-<fullyQualifiedTypeName name="modele.Projet"/>
-<fullyQualifiedTypeName name="modele.Enseignant"/>
 <fullyQualifiedTypeName name="modele.Groupe"/>
 <fullyQualifiedTypeName name="modele.Etudiant"/>
+<fullyQualifiedTypeName name="modele.Projet"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="modele.Enseignant"/>
 </qualifiedTypeNameHistroy>
