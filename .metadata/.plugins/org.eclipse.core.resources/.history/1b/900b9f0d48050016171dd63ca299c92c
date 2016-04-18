@@ -24,19 +24,19 @@ public class Note {
 		this.note = note;
 	}
 
-	public Projet getProjet() {
+	public String getProjet() {
 		return projet;
 	}
 
-	public void setProjet(Projet projet) {
+	public void setProjet(String projet) {
 		this.projet = projet;
 	}
 
-	public Groupe getGroupe() {
+	public String getGroupe() {
 		return groupe;
 	}
 
-	public void setGroupe(Groupe groupe) {
+	public void setGroupe(String groupe) {
 		this.groupe = groupe;
 	}
 	
