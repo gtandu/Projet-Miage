@@ -27,11 +27,4 @@ public class Langage {
 		return this.nom.hashCode();
 		
 	}
-	
-	public String toString()
-	{
-		return "Nom: "+this.nom;
-				
-				
-	}
 }
