@@ -14,11 +14,11 @@ public class Main {
 		
 		Projet projet = enseignant.creerProjet("Projet 1", "Test projet", "Miage");
 		
-		Groupe g1 = enseignant.creerGroupe("Groupe 1");
+		Groupe g1 = enseignant.creerGroupe("Groupe Tandu ElGOff");
 		
-		Groupe g2 = enseignant.creerGroupe("Groupe 2");
+		Groupe g2 = enseignant.creerGroupe("Groupe Toto Tata");
 		
-		System.out.println(enseignant);
+		System.out.println(enseignant+"\n");
 		
 		
 		
@@ -26,9 +26,9 @@ public class Main {
 		
 		Etudiant etu2 = new Etudiant("El Goff", "Saher", "sElGoff", "azerty");
 		
-		Etudiant etu3 = new Etudiant("Tandu", "Glodie", "gTandu", "azerty");
+		Etudiant etu3 = new Etudiant("Toto", "titi", "tTiti", "azerty");
 		
-		Etudiant etu4 = new Etudiant("El Goff", "Saher", "sElGoff", "azerty");
+		Etudiant etu4 = new Etudiant("Tata", "tutu", "tTutu", "azerty");
 		
 		enseignant.affecterEtudiantGroupe(etu1, g1);
 		
@@ -39,12 +39,16 @@ public class Main {
 		enseignant.affecterEtudiantGroupe(etu4, g2);
 		
 		System.out.println(g1);
+		System.out.println(g1.afficherCompoEtudiants());
 		System.out.println(g2);
+		System.out.println(g2.afficherCompoEtudiants());
 		
 		enseignant.affecterGroupeAuProjet(g1, projet);
 		
 		enseignant.affecterGroupeAuProjet(g2, projet);
 		
+		System.out.println(etu1.afficherCompoGroupe());
+		System.out.println(etu3.afficherCompoGroupe());
 		
 		
 		//TODO ENSEIGNANT QUI CREE LE PROJET

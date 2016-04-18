@@ -85,19 +85,24 @@ public abstract class Compte {
 		return this.nom.hashCode()+this.prenom.hashCode();
 	}
 	
-	public String toString()
+	public String afficherCompoGroupe()
 	{
 		String listeGroupe = "";
 		Iterator<Groupe> it = this.listeGroupes.iterator();
-		while (it.hasNext()) {
-		 listeGroupe += "\t - "+it.next().toString()+"\n";
+		while (it.hasNext()) 
+		{
+			listeGroupe += "- "+it.next().toString()+"\n";
 		}
-
+		
+		return "\nListes des groupes : \n"+listeGroupe;
+	}
+	
+	public String toString()
+	{
 		return "Nom: "+this.nom+
 				"\nPrenom: "+this.prenom+
-				"\nLogin: "+this.login+
-				"\nMdp: "+this.mdp+
-				"\nListes des groupes : \n"+listeGroupe;
+				"\nLogin: "+this.login;
+				
 	}
 
 }

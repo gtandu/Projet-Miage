@@ -88,6 +88,17 @@ public class Groupe {
 		return this.nom.hashCode();
 	}
 	
+	public String afficherCompoEtudiants()
+	{
+		String listeEtudiants = "";
+		Iterator<Etudiant> it = this.listeEtudiants.iterator();
+		while (it.hasNext()) {
+		 listeEtudiants += it.next().toString()+"\n----------------\n";
+		}
+		
+		return "Listes des etudiants : \n"+listeEtudiants;
+	}
+	
 	public String toString()
 	{
 

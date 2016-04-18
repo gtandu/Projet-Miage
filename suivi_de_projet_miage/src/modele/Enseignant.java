@@ -38,6 +38,7 @@ public class Enseignant extends Compte{
 	{
 		if(this.listeGroupes.contains(groupe))
 		{
+			etudiant.ajouterGroupe(groupe);
 			return groupe.ajouterEtudiant(etudiant);
 		}
 		return false;
@@ -48,6 +49,7 @@ public class Enseignant extends Compte{
 	{
 		if(this.listeGroupes.contains(groupe))
 		{
+			etudiant.retirerGroupe(groupe);
 			return groupe.supprimerEtudiant(etudiant);
 		}
 		return false;
