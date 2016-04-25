@@ -3,16 +3,33 @@ package main;
 import modele.Enseignant;
 import modele.Etudiant;
 import modele.Groupe;
+import modele.Langage;
+import modele.MotCle;
 import modele.Projet;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
+		//TODO TACHE A JALON
+		//TODO DOCUMENT A JALON
 		
 		Enseignant enseignant = new Enseignant("Benzakki", "Judith", "jBenzakki", "azerty");
 		
 		Projet projet = enseignant.creerProjet("Projet 1", "Test projet", "Miage");
+		
+		Langage j2ee = new Langage("J2EE");
+		Langage html5 = new Langage("HTML5");
+		
+		enseignant.ajouterLangageDuProjet(projet, j2ee);
+		enseignant.ajouterLangageDuProjet(projet, html5);
+		
+		
+		MotCle motCle1 = new MotCle("#J2EE");
+		MotCle motCle2 = new MotCle("#MIAGE");
+		
+		enseignant.ajouterMotCleDuProjet(projet, motCle1);
+		enseignant.ajouterMotCleDuProjet(projet, motCle2);
 		
 		Groupe g1 = enseignant.creerGroupe("Groupe Tandu ElGOff");
 		
@@ -50,11 +67,7 @@ public class Main {
 		System.out.println(etu1.afficherCompoGroupe());
 		System.out.println(etu3.afficherCompoGroupe());
 		
-		
-		//TODO ENSEIGNANT QUI CREE LE PROJET
-		//TODO AFFECTER GROUPE AU PROJET
-		//TODO TOSTRING PROJET FINAL
-
+		enseignant.creerJalon("Jalon1", projet);
 		
 		System.out.println(projet);
 		

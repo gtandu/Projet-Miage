@@ -17,8 +17,6 @@ public class Projet implements Comparable<Projet> {
 	
 	private boolean etat;
 	
-	private int note;
-	
 	private HashSet<Langage> listeLangages;
 	
 	private HashSet<Jalon> listeJalons;
@@ -33,7 +31,6 @@ public class Projet implements Comparable<Projet> {
 		this.filiere = filiere;
 		this.listeGroupes = new HashSet<>();
 		this.etat = true;
-		this.note = 0;
 		this.listeLangages = new HashSet<>();
 		this.listeJalons = new HashSet<>();
 		this.listeMotsCles = new HashSet<>();
@@ -87,12 +84,6 @@ public class Projet implements Comparable<Projet> {
 	public void setListeJalons(HashSet<Jalon> listeJalons) {
 		this.listeJalons = listeJalons;
 	}
-	public int getNote() {
-		return note;
-	}
-	public void setNote(int note) {
-		this.note = note;
-	}
 	public HashSet<MotCle> getListeMotsCles() {
 		return listeMotsCles;
 	}
@@ -115,7 +106,7 @@ public class Projet implements Comparable<Projet> {
 		return this.listeLangages.add(langage);
 	}
 	
-	public boolean supprimerLangageDeProgrammation(Langage langage)
+	public boolean retirerLangageDeProgrammation(Langage langage)
 	{
 		return this.listeLangages.remove(langage);
 	}
@@ -148,7 +139,7 @@ public class Projet implements Comparable<Projet> {
 	@Override
 	public String toString() {
 		return "Projet [nom=" + nom + ", description=" + description + ", date=" + date + ", filiere=" + filiere
-				+ ", listeGroupes=" + listeGroupes + ", etat=" + etat + ", note=" + note + ", listeLangages="
+				+ ", listeGroupes=" + listeGroupes + ", etat=" + etat + ", listeLangages="
 				+ listeLangages + ", listeJalons=" + listeJalons + ", listeMotsCles=" + listeMotsCles + "]";
 	}
 	

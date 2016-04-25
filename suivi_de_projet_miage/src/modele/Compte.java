@@ -5,8 +5,6 @@ import java.util.Iterator;
 
 public abstract class Compte {
 
-	protected HashSet<Groupe> listeGroupes;
-
 	protected String nom;
 
 	protected String prenom;
@@ -15,7 +13,10 @@ public abstract class Compte {
 
 	protected String mdp;
 	
-	
+	protected HashSet<Groupe> listeGroupes;
+
+	protected HashSet<Note> listeNotes;
+
 	public Compte(String nom, String prenom, String login, String mdp)
 	{
 		this.nom = nom;
@@ -23,6 +24,7 @@ public abstract class Compte {
 		this.login = login;
 		this.mdp = mdp;
 		this.listeGroupes = new HashSet<>();
+		this.listeNotes = new HashSet<>();
 	}
 
 	public HashSet<Groupe> getListeGroupes() {
@@ -64,45 +66,54 @@ public abstract class Compte {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-	
-	public boolean ajouterGroupe(Groupe groupe)
-	{
+
+	public HashSet<Note> getListeNotes() {
+		return listeNotes;
+	}
+
+	public void setListeNotes(HashSet<Note> listeNotes) {
+		this.listeNotes = listeNotes;
+	}
+
+	public boolean ajouterGroupe(Groupe groupe) {
 		return this.listeGroupes.add(groupe);
 	}
-	
-	public boolean retirerGroupe(Groupe groupe)
-	{
+
+	public boolean retirerGroupe(Groupe groupe) {
 		return this.listeGroupes.remove(groupe);
 	}
 	
-	public boolean equals(Compte compte)
+	public boolean ajouterNote(Note note)
 	{
+		return this.listeNotes.add(note);
+	}
+	
+	public boolean retirerNote(Note note)
+	{
+		return this.listeNotes.remove(note);
+	}
+
+	public boolean equals(Compte compte) {
 		return this.nom.equals(compte.getNom()) && this.prenom.equals(compte.getPrenom());
 	}
-	
-	public int hashCode()
-	{
-		return this.nom.hashCode()+this.prenom.hashCode();
+
+	public int hashCode() {
+		return this.nom.hashCode() + this.prenom.hashCode();
 	}
-	
-	public String afficherCompoGroupe()
-	{
+
+	public String afficherCompoGroupe() {
 		String listeGroupe = "";
 		Iterator<Groupe> it = this.listeGroupes.iterator();
-		while (it.hasNext()) 
-		{
-			listeGroupe += "- "+it.next().toString()+"\n";
+		while (it.hasNext()) {
+			listeGroupe += "- " + it.next().toString() + "\n";
 		}
-		
-		return "\nListes des groupes : \n"+listeGroupe;
+
+		return "\nListes des groupes : \n" + listeGroupe;
 	}
-	
-	public String toString()
-	{
-		return "Nom: "+this.nom+
-				"\nPrenom: "+this.prenom+
-				"\nLogin: "+this.login;
-				
+
+	public String toString() {
+		return "Nom: " + this.nom + "\nPrenom: " + this.prenom + "\nLogin: " + this.login;
+
 	}
 
 }

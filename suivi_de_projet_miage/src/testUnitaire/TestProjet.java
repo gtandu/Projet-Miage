@@ -54,7 +54,7 @@ public class TestProjet {
 		projet.ajouterLangageDeProgrammation(langage);
 		
 		//GIVEN
-		projet.supprimerLangageDeProgrammation(langage);
+		projet.retirerLangageDeProgrammation(langage);
 		HashSet<Langage> langagesProgrammations = projet.getListeLangages();
 		
 		//THEN

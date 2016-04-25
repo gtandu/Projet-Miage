@@ -34,6 +34,26 @@ public class Enseignant extends Compte{
 		return groupe;
 	}
 	
+	public Jalon creerJalon(String nom, Projet projet)
+	{
+		Jalon jalon = new Jalon(nom, projet);
+		return jalon;
+	}
+	
+	public Langage creerLangageDeProgrammation(String nom)
+	{
+		Langage langage = new Langage(nom);
+		
+		return langage;
+	}
+	
+	public MotCle creerMotCle(String nom)
+	{
+		MotCle motCle = new MotCle(nom);
+		
+		return motCle;
+	}
+	
 	public boolean affecterEtudiantGroupe(Etudiant etudiant, Groupe groupe)
 	{
 		if(this.listeGroupes.contains(groupe))
@@ -74,6 +94,30 @@ public class Enseignant extends Compte{
 			return groupe.retirerProjet(projet);
 		}
 		return false;
+	}
+	public boolean ajouterLangageDuProjet(Projet projet, Langage langage)
+	{
+		return projet.ajouterLangageDeProgrammation(langage);
+	}
+	public boolean retirerLangageDuProjet(Projet projet, Langage langage)
+	{
+		return projet.retirerLangageDeProgrammation(langage);
+	}
+	public boolean ajouterMotCleDuProjet(Projet projet, MotCle motCle)
+	{
+		return projet.ajouterMotCle(motCle);
+	}
+	public boolean retirerMotCleDuProjet(Projet projet, MotCle motCle)
+	{
+		return projet.retirerMotCle(motCle);
+	}
+	public boolean ajouterJalonDuProjet(Projet projet, Jalon jalon)
+	{
+		return projet.ajouterJalon(jalon);
+	}
+	public boolean retirerJalonDuProjet(Projet projet, Jalon jalon)
+	{
+		return projet.retirerJalon(jalon);
 	}
 	
 	
