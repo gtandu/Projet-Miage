@@ -2,9 +2,10 @@ package modele;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Projet implements Comparable<Projet> {
-		
+	
 	private String nom;
 	
 	private String description;
@@ -22,9 +23,12 @@ public class Projet implements Comparable<Projet> {
 	private HashSet<Jalon> listeJalons;
 	
 	private HashSet<MotCle> listeMotsCles;
+		
+	public static int IDENTIFIANT = 0;
 	
 	public Projet(String nom, String description, String filiere)
 	{
+		IDENTIFIANT++; 
 		this.nom = nom;
 		this.description = description;
 		this.date = new Date();
@@ -34,6 +38,19 @@ public class Projet implements Comparable<Projet> {
 		this.listeLangages = new HashSet<>();
 		this.listeJalons = new HashSet<>();
 		this.listeMotsCles = new HashSet<>();
+	}
+	
+	public Projet(Projet projet)
+	{
+		this.nom = projet.getNom();
+		this.description = projet.getDescription();
+		this.date = projet.getDate();
+		this.filiere = projet.getFiliere();
+		this.listeGroupes = projet.getListeGroupes();
+		this.etat = projet.isEtat();
+		this.listeLangages = projet.getListeLangages();
+		this.listeJalons = projet.getListeJalons();
+		this.listeMotsCles = projet.getListeMotsCles();
 	}
 	
 	public String getNom() {
@@ -130,6 +147,26 @@ public class Projet implements Comparable<Projet> {
 	{
 		return this.listeMotsCles.remove(motCle);
 	}
+	
+	public double calculerNote()
+	{
+		double sommeJalon = 0;
+		int i;
+		Iterator it = this.listeJalons.iterator();
+		for(i=0; it.hasNext(); i++)
+		{
+			Jalon jalon = (Jalon) it.next();
+			
+			sommeJalon+= jalon.getNote();
+		}
+		
+		return sommeJalon/=i;
+	}
+	
+	public String afficherInfosJalons()
+	{
+		return "------ Listes des jalons------\n"+this.listeJalons;
+	}
 		
 	@Override
 	public int compareTo(Projet projet) {
@@ -138,9 +175,9 @@ public class Projet implements Comparable<Projet> {
 	
 	@Override
 	public String toString() {
-		return "Projet [nom=" + nom + ", description=" + description + ", date=" + date + ", filiere=" + filiere
-				+ ", listeGroupes=" + listeGroupes + ", etat=" + etat + ", listeLangages="
-				+ listeLangages + ", listeJalons=" + listeJalons + ", listeMotsCles=" + listeMotsCles + "]";
+		return "Identifiant du projet: "+IDENTIFIANT+"\nNom du projet: " + nom + "\nDescription: " + description + "\nDate de creation: " + date + "\nFiliere: " + filiere
+				+ "\nListes des groupes: " + listeGroupes + "\nEtat: " + etat + "\nLangages du projet: "
+				+ listeLangages + "\nListe des mots cles : " + listeMotsCles;
 	}
 	
 	

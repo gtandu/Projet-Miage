@@ -40,6 +40,15 @@ public class Note {
 		this.groupe = groupe;
 	}
 	
+	public double getNoteByProjet(int idProjet)
+	{
+		if(projet.IDENTIFIANT == idProjet)
+		{
+			return this.note;
+		}
+		
+		return 0;
+	}
 	
 	
 	

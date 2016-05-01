@@ -43,7 +43,6 @@ public class Jalon implements Comparable<Jalon> {
 	
 	public boolean ajouterDocument(Document doc)
 	{
-		//TODO EXCEPTION
 		return this.listeDocuments.add(doc);
 	}
 	
@@ -113,10 +112,15 @@ public class Jalon implements Comparable<Jalon> {
 		return this.dateDebut.compareTo(jalon.getDateDebut());
 	}
 	
+	public String afficherListesDesTaches()
+	{
+		return "------ Listes des taches ------\n" + listeTaches;
+	}
+	
 	@Override
 	public String toString() {
-		return "Jalon [nom=" + nom + ", projet=" + projet + ", dateDebut=" + dateDebut + ", dateFin=" + dateFin
-				+ ", listeTaches=" + listeTaches + ", listeDocuments=" + listeDocuments + ", note=" + note + "]";
+		return "Nom du jalon: "+nom + "\nNom du projet : " + projet.getNom() + "\nDate de debut: " + dateDebut + "\nDate de fin: " + dateFin
+				+"\nNombres de taches: "+this.listeTaches.size()+"\nListe des documents: " + listeDocuments + "\nNote du jalon: " + note;
 	}
 
 }

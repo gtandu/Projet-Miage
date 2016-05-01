@@ -20,13 +20,13 @@
 <fullyQualifiedTypeName name="org.hamcrest.collection.IsCollectionWithSize"/>
 <fullyQualifiedTypeName name="org.hamcrest.core.IsCollectionContaining"/>
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
-<fullyQualifiedTypeName name="modele.Langage"/>
-<fullyQualifiedTypeName name="modele.Jalon"/>
-<fullyQualifiedTypeName name="modele.MotCle"/>
 <fullyQualifiedTypeName name="modele.Groupe"/>
 <fullyQualifiedTypeName name="modele.Etudiant"/>
 <fullyQualifiedTypeName name="modele.Projet"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="modele.Enseignant"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="modele.Langage"/>
+<fullyQualifiedTypeName name="modele.MotCle"/>
+<fullyQualifiedTypeName name="modele.Jalon"/>
 </qualifiedTypeNameHistroy>

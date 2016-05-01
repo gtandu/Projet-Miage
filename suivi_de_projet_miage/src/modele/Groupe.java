@@ -52,6 +52,18 @@ public class Groupe {
 		this.listeProjets = listeProjets;
 	}
 
+	@SuppressWarnings("static-access")
+	public Projet getProjetByIdentifiant(int idProjet) {
+
+		for (Projet p : this.listeProjets) {
+			if (p.IDENTIFIANT == idProjet) {
+				return p;
+			}
+		}
+
+		return null;
+	}
+
 	public boolean ajouterEnseignement(Enseignant enseignant) {
 		return this.listeEnseignants.add(enseignant);
 	}
@@ -69,42 +81,35 @@ public class Groupe {
 	}
 
 	public boolean ajouterProjet(Projet projet) {
-		// COPY PROJET ?
-		return this.listeProjets.add(projet);
+		Projet newProjet = new Projet(projet);
+		return this.listeProjets.add(newProjet);
 	}
 
-	public boolean retirerProjet(Projet projet)
-	{
+	public boolean retirerProjet(Projet projet) {
 		return this.listeProjets.remove(projet);
 	}
 
-	public boolean equals(Groupe groupe)
-	{
+	public boolean equals(Groupe groupe) {
 		return this.nom.equals(groupe.getNom());
 	}
-	
-	public int hashCode()
-	{
+
+	public int hashCode() {
 		return this.nom.hashCode();
 	}
-	
-	public String afficherCompoEtudiants()
-	{
+
+	public String afficherCompoEtudiants() {
 		String listeEtudiants = "";
 		Iterator<Etudiant> it = this.listeEtudiants.iterator();
 		while (it.hasNext()) {
-		 listeEtudiants += it.next().toString()+"\n----------------\n";
+			listeEtudiants += it.next().toString() + "\n----------------\n";
 		}
-		
-		return "Listes des etudiants : \n"+listeEtudiants;
-	}
-	
-	public String toString()
-	{
 
-		return "Nom du groupe : "+this.nom;
+		return "Listes des etudiants : \n" + listeEtudiants;
 	}
-	
-	
+
+	public String toString() {
+
+		return this.nom;
+	}
 
 }

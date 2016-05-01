@@ -1,5 +1,7 @@
 package modele;
 
+import java.util.Date;
+
 public class Enseignant extends Compte{
 	
 	private boolean admin;
@@ -37,21 +39,41 @@ public class Enseignant extends Compte{
 	public Jalon creerJalon(String nom, Projet projet)
 	{
 		Jalon jalon = new Jalon(nom, projet);
+		projet.ajouterJalon(jalon);
 		return jalon;
 	}
 	
-	public Langage creerLangageDeProgrammation(String nom)
+	public boolean creerLangageDeProgrammation(String nom, Projet projet)
 	{
 		Langage langage = new Langage(nom);
 		
-		return langage;
+		return projet.ajouterLangageDeProgrammation(langage);
 	}
 	
-	public MotCle creerMotCle(String nom)
+	public boolean creerMotCle(String nom, Projet projet)
 	{
 		MotCle motCle = new MotCle(nom);
 		
-		return motCle;
+		return projet.ajouterMotCle(motCle);
+	}
+	
+	public boolean creerTache(Jalon jalon, String nomExecutant, String description)
+	{
+		Tache tache = new Tache(jalon, nomExecutant, description, new Date(), null);
+		return jalon.ajouterTache(tache);
+	}
+	
+	public void noterJalon(Jalon jalon, double note)
+	{
+		jalon.setNote(note);
+	}
+	
+	public void noterProjet(Etudiant etudiant, Projet projet, Groupe groupe)
+	{
+		double note = projet.calculerNote();
+		etudiant.ajouterNote(note, projet, groupe);
+		
+		
 	}
 	
 	public boolean affecterEtudiantGroupe(Etudiant etudiant, Groupe groupe)
@@ -119,6 +141,8 @@ public class Enseignant extends Compte{
 	{
 		return projet.retirerJalon(jalon);
 	}
+	
+	
 	
 	
 

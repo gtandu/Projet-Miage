@@ -30,7 +30,7 @@ public class Langage {
 	
 	public String toString()
 	{
-		return "Nom: "+this.nom;
+		return this.nom;
 				
 				
 	}

@@ -15,7 +15,7 @@ public abstract class Compte {
 	
 	protected HashSet<Groupe> listeGroupes;
 
-	protected HashSet<Note> listeNotes;
+	
 
 	public Compte(String nom, String prenom, String login, String mdp)
 	{
@@ -24,7 +24,7 @@ public abstract class Compte {
 		this.login = login;
 		this.mdp = mdp;
 		this.listeGroupes = new HashSet<>();
-		this.listeNotes = new HashSet<>();
+		
 	}
 
 	public HashSet<Groupe> getListeGroupes() {
@@ -67,13 +67,7 @@ public abstract class Compte {
 		this.mdp = mdp;
 	}
 
-	public HashSet<Note> getListeNotes() {
-		return listeNotes;
-	}
-
-	public void setListeNotes(HashSet<Note> listeNotes) {
-		this.listeNotes = listeNotes;
-	}
+	
 
 	public boolean ajouterGroupe(Groupe groupe) {
 		return this.listeGroupes.add(groupe);
@@ -83,16 +77,7 @@ public abstract class Compte {
 		return this.listeGroupes.remove(groupe);
 	}
 	
-	public boolean ajouterNote(Note note)
-	{
-		return this.listeNotes.add(note);
-	}
 	
-	public boolean retirerNote(Note note)
-	{
-		return this.listeNotes.remove(note);
-	}
-
 	public boolean equals(Compte compte) {
 		return this.nom.equals(compte.getNom()) && this.prenom.equals(compte.getPrenom());
 	}

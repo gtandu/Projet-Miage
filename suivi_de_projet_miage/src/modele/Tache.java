@@ -85,8 +85,8 @@ public class Tache implements Comparable<Tache>{
 	
 
 	public String toString() {
-		return "Tache [jalon=" + jalon + ", nomExecutant=" + nomExecutant + ", description=" + description
-				+ ", dateDebut=" + dateDebut + ", dateFin=" + dateFin + ", etat=" + etat + "]";
+		return "Tache du jalon: " + jalon.getNom() + "\nNom executant: " + nomExecutant + "Description: " + description
+				+ "\n DateDebut: " + dateDebut + "\nDateFin: " + dateFin + "\nEtat: " + etat;
 	}
 	
 	

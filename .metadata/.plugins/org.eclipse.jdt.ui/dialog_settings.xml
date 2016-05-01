@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-<<<<<<< Updated upstream
 	<item value="/Users/Glodie/Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="renameSubpackages"/>
@@ -69,9 +68,6 @@
 		<item value="false" key="GoIntoTopLevelTypeAction.isChecked"/>
 		<item value="false" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
 	</section>
-=======
-	<item value="/Users/Sasa/Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
->>>>>>> Stashed changes
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
@@ -115,28 +111,13 @@
 		<item value="false" key="FinalModifier"/>
 		<item value="10" key="LimitValue"/>
 	</section>
-	<section name="SourceActionDialog.methods">
-		<item value="false" key="SynchronizedModifier"/>
-		<item value="false" key="Comments"/>
-		<item value="1" key="VisibilityModifier"/>
-		<item value="false" key="FinalModifier"/>
-	</section>
-	<section name="NewClassWizardPage">
-		<item value="false" key="create_constructor"/>
-		<item value="true" key="create_unimplemented"/>
-	</section>
 	<section name="RenameInformationPopup">
 	</section>
-<<<<<<< Updated upstream
 	<section name="ClasspathContainerSelectionPage">
 		<item value="1" key="index"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item value="false" key="create_package_info_java"/>
-=======
-	<section name="OptionalMessageDialog.hide.">
-		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
->>>>>>> Stashed changes
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
@@ -152,16 +133,6 @@
 	</section>
 	<section name="completion_proposal_size">
 	</section>
-<<<<<<< Updated upstream
-=======
-	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item value="519" key="DIALOG_WIDTH"/>
-		<item value="1|.SF NS Text|11.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
-		<item value="639" key="DIALOG_HEIGHT"/>
-		<item value="701" key="DIALOG_X_ORIGIN"/>
-		<item value="124" key="DIALOG_Y_ORIGIN"/>
-	</section>
->>>>>>> Stashed changes
 	<section name="AddGetterSetterDialog">
 		<item value="false" key="SortOrdering"/>
 		<item value="false" key="RemoveFinal"/>
