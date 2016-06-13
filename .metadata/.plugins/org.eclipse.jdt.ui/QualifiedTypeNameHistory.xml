@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="modele.Tache"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="org.hamcrest.Matcher"/>
@@ -10,23 +8,27 @@
 <fullyQualifiedTypeName name="javax.swing.SpringLayout.Constraints"/>
 <fullyQualifiedTypeName name="org.hamcrest.CoreMatchers"/>
 <fullyQualifiedTypeName name="org.hamcrest.Matchers"/>
-<fullyQualifiedTypeName name="modele.Document"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.hamcrest.collection.IsEmptyCollection"/>
 <fullyQualifiedTypeName name="org.hamcrest.core.IsNot"/>
 <fullyQualifiedTypeName name="org.hamcrest.core.IsNull"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.hamcrest.collection.IsCollectionWithSize"/>
 <fullyQualifiedTypeName name="org.hamcrest.core.IsCollectionContaining"/>
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="modele.Groupe"/>
-<fullyQualifiedTypeName name="modele.Etudiant"/>
-<fullyQualifiedTypeName name="modele.Projet"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="modele.Enseignant"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="modele.Langage"/>
 <fullyQualifiedTypeName name="modele.MotCle"/>
 <fullyQualifiedTypeName name="modele.Jalon"/>
+<fullyQualifiedTypeName name="modele.Document"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="modele.Projet"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="modele.Etudiant"/>
+<fullyQualifiedTypeName name="modele.Tache"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="modele.Note"/>
 </qualifiedTypeNameHistroy>

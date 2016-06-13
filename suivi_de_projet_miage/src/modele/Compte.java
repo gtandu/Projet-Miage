@@ -1,5 +1,6 @@
 package modele;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -15,6 +16,7 @@ public abstract class Compte {
 	
 	protected HashSet<Groupe> listeGroupes;
 
+	protected ArrayList<Projet> listeProjets;
 	
 
 	public Compte(String nom, String prenom, String login, String mdp)
@@ -24,6 +26,7 @@ public abstract class Compte {
 		this.login = login;
 		this.mdp = mdp;
 		this.listeGroupes = new HashSet<>();
+		this.listeProjets = new ArrayList<Projet>();
 		
 	}
 
@@ -66,8 +69,15 @@ public abstract class Compte {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-
 	
+
+	public ArrayList<Projet> getListeProjets() {
+		return listeProjets;
+	}
+
+	public void setListeProjets(ArrayList<Projet> listeProjets) {
+		this.listeProjets = listeProjets;
+	}
 
 	public boolean ajouterGroupe(Groupe groupe) {
 		return this.listeGroupes.add(groupe);
@@ -93,7 +103,7 @@ public abstract class Compte {
 			listeGroupe += "- " + it.next().toString() + "\n";
 		}
 
-		return "\nListes des groupes : \n" + listeGroupe;
+		return "\nListes des groupes de "+this.nom+" : \n" + listeGroupe;
 	}
 
 	public String toString() {

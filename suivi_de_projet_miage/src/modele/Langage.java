@@ -4,8 +4,6 @@ public class Langage {
 
 	private String nom;
 
-	public static long ID = 0;
-
 	public Langage(String nom) {
 		this.nom = nom;
 	}
@@ -25,7 +23,6 @@ public class Langage {
 	public int hashCode()
 	{
 		return this.nom.hashCode();
-		
 	}
 	
 	public String toString()

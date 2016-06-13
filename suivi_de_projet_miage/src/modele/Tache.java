@@ -23,7 +23,7 @@ public class Tache implements Comparable<Tache>{
 		this.description = description;
 		this.dateDebut = dateDebut;
 		this.dateFin = dateFin;
-		this.etat = true;
+		this.etat = false;
 
 	}
 
@@ -83,10 +83,9 @@ public class Tache implements Comparable<Tache>{
 		
 	}
 	
-
 	public String toString() {
-		return "Tache du jalon: " + jalon.getNom() + "\nNom executant: " + nomExecutant + "Description: " + description
-				+ "\n DateDebut: " + dateDebut + "\nDateFin: " + dateFin + "\nEtat: " + etat;
+		return "Tache du jalon: " + jalon.getNom() + "\nNom executant: " + nomExecutant + "\nDescription: " + description
+				+ "\nDateDebut: " + dateDebut + "\nDateFin: " + dateFin + "\nEtat: " + etat+"\n";
 	}
 	
 	

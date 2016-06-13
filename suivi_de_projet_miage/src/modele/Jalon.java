@@ -18,7 +18,7 @@ public class Jalon implements Comparable<Jalon> {
 
 	private HashSet<Document> listeDocuments;
 
-	private double note;
+	private Note note;
 
 	public Jalon(String nom, Projet projet) {
 		this.nom = nom;
@@ -27,7 +27,7 @@ public class Jalon implements Comparable<Jalon> {
 		this.dateFin = null;
 		this.listeTaches = new HashSet<Tache>();
 		this.listeDocuments = new HashSet<Document>();
-		this.note = 0;
+		this.note = new Note(0, projet);
 	}
 	
 	public boolean ajouterTache(Tache t)
@@ -99,13 +99,15 @@ public class Jalon implements Comparable<Jalon> {
 		this.listeDocuments = listeDocuments;
 	}
 
-	public double getNote() {
+	public Note getNote() {
 		return note;
 	}
 
-	public void setNote(double note) {
+	public void setNote(Note note) {
 		this.note = note;
 	}
+	
+	//TODO equals + hashcode
 
 	@Override
 	public int compareTo(Jalon jalon) {
@@ -120,7 +122,7 @@ public class Jalon implements Comparable<Jalon> {
 	@Override
 	public String toString() {
 		return "Nom du jalon: "+nom + "\nNom du projet : " + projet.getNom() + "\nDate de debut: " + dateDebut + "\nDate de fin: " + dateFin
-				+"\nNombres de taches: "+this.listeTaches.size()+"\nListe des documents: " + listeDocuments + "\nNote du jalon: " + note;
+				+"\nNombres de taches: "+this.listeTaches.size()+"\nListe des documents: " + listeDocuments + "\nNote du jalon: " + note.getValeurNote()+"\n";
 	}
 
 }

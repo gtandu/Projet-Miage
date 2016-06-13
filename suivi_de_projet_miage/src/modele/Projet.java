@@ -23,8 +23,12 @@ public class Projet implements Comparable<Projet> {
 	private HashSet<Jalon> listeJalons;
 	
 	private HashSet<MotCle> listeMotsCles;
+	
+	private Note note;
 		
 	public static int IDENTIFIANT = 0;
+	
+	
 	
 	public Projet(String nom, String description, String filiere)
 	{
@@ -38,6 +42,7 @@ public class Projet implements Comparable<Projet> {
 		this.listeLangages = new HashSet<>();
 		this.listeJalons = new HashSet<>();
 		this.listeMotsCles = new HashSet<>();
+		this.note = new Note();
 	}
 	
 	public Projet(Projet projet)
@@ -108,6 +113,14 @@ public class Projet implements Comparable<Projet> {
 		this.listeMotsCles = listeMotsCles;
 	}
 	
+	public Note getNote() {
+		return note;
+	}
+
+	public void setNote(Note note) {
+		this.note = note;
+	}
+
 	public boolean ajouterGroupe(Groupe groupe)
 	{
 		return this.listeGroupes.add(groupe);
@@ -152,12 +165,13 @@ public class Projet implements Comparable<Projet> {
 	{
 		double sommeJalon = 0;
 		int i;
-		Iterator it = this.listeJalons.iterator();
+		Iterator<Jalon> it = this.listeJalons.iterator();
+		
 		for(i=0; it.hasNext(); i++)
 		{
 			Jalon jalon = (Jalon) it.next();
 			
-			sommeJalon+= jalon.getNote();
+			sommeJalon+= jalon.getNote().getValeurNote();
 		}
 		
 		return sommeJalon/=i;

@@ -2,26 +2,28 @@ package modele;
 
 public class Note {
 	
-	private double note;
+	private double valeurNote;
 	
 	private Projet projet;
 	
-	private Groupe groupe;
-	
+	public Note()
+	{
+		this.valeurNote = 0;
+		this.projet = null;
+	}
 
-	public Note (double note, Projet projet, Groupe groupe){
+	public Note (double note, Projet projet){
 		
-		this.note = note;
+		this.valeurNote = note;
 		this.projet = projet;
-		this.groupe = groupe;
 	}
 	
-	public double getNote() {
-		return note;
+	public double getValeurNote() {
+		return valeurNote;
 	}
 
 	public void setNote(double note) {
-		this.note = note;
+		this.valeurNote = note;
 	}
 
 	public Projet getProjet() {
@@ -31,27 +33,20 @@ public class Note {
 	public void setProjet(Projet projet) {
 		this.projet = projet;
 	}
-
-	public Groupe getGroupe() {
-		return groupe;
-	}
-
-	public void setGroupe(Groupe groupe) {
-		this.groupe = groupe;
-	}
 	
-	public double getNoteByProjet(int idProjet)
+	public double getNoteByIdProjet(int idProjet)
 	{
 		if(projet.IDENTIFIANT == idProjet)
 		{
-			return this.note;
+			return this.valeurNote;
 		}
 		
 		return 0;
 	}
 	
+	public String toString()
+	{
+		return "Note: " + this.valeurNote;
+	}
 	
-	
-	
-
 }

@@ -1,11 +1,8 @@
 package testUnitaire;
 
 import static org.junit.Assert.*;
-
 import java.util.Date;
-
 import org.junit.Test;
-
 import modele.Jalon;
 import modele.Projet;
 import modele.Tache;
@@ -20,7 +17,7 @@ public class TestTache {
 		Jalon jalon = new Jalon("EL GOFF", projet);
 		String nomExecutantAttendu = "EL GOFF";
 		String descriptionAttendu = "Rien à signalé";
-		boolean etatAttendu = true;
+		boolean etatAttendu = false;
 
 		// Then
 		Tache t = new Tache(jalon, "EL GOFF", "Rien à signalé", new Date(), new Date());
