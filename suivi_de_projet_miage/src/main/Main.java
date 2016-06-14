@@ -110,8 +110,6 @@ public class Main {
 		// AFFICHE LA NOTE DU PROJET
 		System.out.println(etu1.afficherNoteProjet(projetDuGroupe1));
 		
-		System.out.println(enseignant.afficherListeDesProjets());
-
 	}
 
 }

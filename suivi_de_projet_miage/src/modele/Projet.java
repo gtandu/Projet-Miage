@@ -181,6 +181,16 @@ public class Projet implements Comparable<Projet> {
 	{
 		return "------ Listes des jalons------\n"+this.listeJalons;
 	}
+	
+	public int hashCode()
+	{
+		return Integer.valueOf(this.IDENTIFIANT).hashCode()+this.nom.hashCode();
+	}
+	
+	public boolean equals(Projet projet)
+	{
+		return this.IDENTIFIANT == projet.IDENTIFIANT;
+	}
 		
 	@Override
 	public int compareTo(Projet projet) {

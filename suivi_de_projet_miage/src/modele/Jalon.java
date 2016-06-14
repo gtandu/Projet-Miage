@@ -7,7 +7,7 @@ import java.util.List;
 public class Jalon implements Comparable<Jalon> {
 
 	private String nom;
-	
+
 	private Projet projet;
 
 	private Date dateDebut;
@@ -29,25 +29,21 @@ public class Jalon implements Comparable<Jalon> {
 		this.listeDocuments = new HashSet<Document>();
 		this.note = new Note(0, projet);
 	}
-	
-	public boolean ajouterTache(Tache t)
-	{
+
+	public boolean ajouterTache(Tache t) {
 		// TODO EXCEPTION
 		return this.listeTaches.add(t);
 	}
-	
-	public boolean supprimerTache(Tache t)
-	{
+
+	public boolean supprimerTache(Tache t) {
 		return this.listeTaches.remove(t);
 	}
-	
-	public boolean ajouterDocument(Document doc)
-	{
+
+	public boolean ajouterDocument(Document doc) {
 		return this.listeDocuments.add(doc);
 	}
-	
-	public boolean supprimerDocument(Document doc)
-	{
+
+	public boolean supprimerDocument(Document doc) {
 		return this.listeDocuments.remove(doc);
 	}
 
@@ -106,23 +102,34 @@ public class Jalon implements Comparable<Jalon> {
 	public void setNote(Note note) {
 		this.note = note;
 	}
+
+	// TODO equals + hashcode
+
+	public boolean equals(Jalon jalon) {
+		return this.nom.equals(jalon.getNom()) && this.dateDebut.equals(jalon.getDateDebut())
+				&& this.dateFin.equals(jalon.getDateFin()) && this.listeDocuments.equals(jalon.getListeDocuments())
+				&& this.listeTaches.equals(jalon.getListeTaches()) && this.note.equals(jalon.getNote());
+	}
 	
-	//TODO equals + hashcode
+	public int hashCode()
+	{
+		return this.nom.hashCode()+this.projet.hashCode();
+	}
 
 	@Override
 	public int compareTo(Jalon jalon) {
 		return this.dateDebut.compareTo(jalon.getDateDebut());
 	}
-	
-	public String afficherListesDesTaches()
-	{
+
+	public String afficherListesDesTaches() {
 		return "------ Listes des taches ------\n" + listeTaches;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Nom du jalon: "+nom + "\nNom du projet : " + projet.getNom() + "\nDate de debut: " + dateDebut + "\nDate de fin: " + dateFin
-				+"\nNombres de taches: "+this.listeTaches.size()+"\nListe des documents: " + listeDocuments + "\nNote du jalon: " + note.getValeurNote()+"\n";
+		return "Nom du jalon: " + nom + "\nNom du projet : " + projet.getNom() + "\nDate de debut: " + dateDebut
+				+ "\nDate de fin: " + dateFin + "\nNombres de taches: " + this.listeTaches.size()
+				+ "\nListe des documents: " + listeDocuments + "\nNote du jalon: " + note.getValeurNote() + "\n";
 	}
 
 }

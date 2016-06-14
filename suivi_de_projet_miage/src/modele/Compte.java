@@ -89,11 +89,11 @@ public abstract class Compte {
 	
 	
 	public boolean equals(Compte compte) {
-		return this.nom.equals(compte.getNom()) && this.prenom.equals(compte.getPrenom());
+		return this.login.equals(compte.getLogin()) && this.mdp.equals(compte.getMdp()) ;
 	}
 
 	public int hashCode() {
-		return this.nom.hashCode() + this.prenom.hashCode();
+		return this.login.hashCode() + this.mdp.hashCode();
 	}
 
 	public String afficherCompoGroupe() {

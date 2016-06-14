@@ -44,6 +44,16 @@ public class Note {
 		return 0;
 	}
 	
+	public boolean equals(Note note)
+	{
+		return this.projet.IDENTIFIANT == note.getProjet().IDENTIFIANT && this.valeurNote == note.getValeurNote();
+	}
+	
+	public int hashCode()
+	{
+		return this.projet.hashCode()+Double.valueOf(this.valeurNote).hashCode();
+	}
+	
 	public String toString()
 	{
 		return "Note: " + this.valeurNote;
